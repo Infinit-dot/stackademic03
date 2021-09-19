@@ -6,24 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marlyon Digital Agency</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <div class="logo">
-        <a href=""><p>Marlyon</p></a>
+      <div class="container">
+        <div class="logo">
+          <a href=""><p>Marlyon</p></a>
+        </div>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__link"><a href="#">Our services</a></li>
+            <li class="nav__link"><a href="#">Portfolio</a></li>
+            <li class="nav__link"><a href="#">Process</a></li>
+            <li class="nav__link"><a href="#">About</a></li>
+            <li class="nav__link"><a href="#">Contact</a></li>
+          </ul>
+          <div class="btn btn--nav"><a href="">Let's talk</a></div>
+        </nav>
       </div>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__link"><a href="#">Our services</a></li>
-          <li class="nav__link"><a href="#">Portfolio</a></li>
-          <li class="nav__link"><a href="#">Process</a></li>
-          <li class="nav__link"><a href="#">About</a></li>
-          <li class="nav__link"><a href="#">Contact</a></li>
-        </ul>
-        <div class="btn btn--nav"><a href="">Let's talk</a></div>
-      </nav>
-
-      <section class="hero">
+      <section class="hero container">
         <div class="hero__image">
           <img src="image\austin-distel-qgdJX9mvMJI-unsplash.jpg" alt="" />
         </div>
@@ -37,48 +45,86 @@
         </div>
       </section>
     </header>
-    <section class="testimonials">
+    <section class="testimonials container">
       <div class="testimonials__label">
-        <div class="testimonials__image"><img src="" alt="" /></div>
+        <div class="testimonials__image">
+          <img src="image\pic1.png" alt="" />
+        </div>
         <div class="testimonials__name">Bob Welsh</div>
         <div class="testimonials__message">
           <p>
             Efficiently unleash cross-media information without cross-media
             value. Quickly maximize timely deliverables for real-time schemas.
-            Dramatically maintain clicks-and-mortar solutions without
-            functional solutions.
+            Dramatically maintain clicks-and-mortar solutions without functional
+            solutions.
           </p>
         </div>
       </div>
       <div class="testimonials__label">
-        <div class="testimonials__image"><img src="" alt="" /></div>
+        <div class="testimonials__image">
+          <img src="image\pic3.png" alt="" />
+        </div>
         <div class="testimonials__name">Martin White</div>
         <div class="testimonials__message">
           <p>
             Efficiently unleash cross-media information without cross-media
             value. Quickly maximize timely deliverables for real-time schemas.
-            Dramatically maintain clicks-and-mortar solutions without
-            functional solutions.
+            Dramatically maintain clicks-and-mortar solutions without functional
+            solutions.
           </p>
         </div>
       </div>
       <div class="testimonials__label">
-        <div class="testimonials__image"><img src="" alt="" /></div>
+        <div class="testimonials__image">
+          <img src="image\pic2.png" alt="" />
+        </div>
         <div class="testimonials__name">Helena Montana</div>
         <div class="testimonials__message">
           <p>
             Efficiently unleash cross-media information without cross-media
             value. Quickly maximize timely deliverables for real-time schemas.
-            Dramatically maintain clicks-and-mortar solutions without
-            functional solutions.
+            Dramatically maintain clicks-and-mortar solutions without functional
+            solutions.
           </p>
         </div>
       </div>
     </section>
     <footer>
-      <section class="footer">
-        
-      </section>
+      <div class="footer container">
+        <nav class="footer"></nav>
+          <div class="footer__col">
+            <h3 class="footer__title">Services</h3>
+            <ul class="footer__list">
+              <li class="footer__link"><a href="#">Design Thinking</a></li>
+              <li class="footer__link"><a href="#">Advertisement</a></li>
+              <li class="footer__link"><a href="#">Branding</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__title">Support</h3>
+            <ul class="footer__list">
+              <li class="footer__link"><a href="#">Pricing</a></li>
+              <li class="footer__link"><a href="#">Documentation</a></li>
+              <li class="footer__link"><a href="#">Sitemap</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__title">Company</h3>
+            <ul class="footer__list">
+              <li class="footer__link"><a href="#">About us</a></li>
+              <li class="footer__link"><a href="#">Partners</a></li>
+              <li class="footer__link"><a href="#">Testimonials</a></li>
+              <li class="footer__link"><a href="#">Portfolio</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="footer__col">
+          <h3 class="footer__title">subscribe to our newsletter</h3>
+           <p class="footer__text">The latest news articles, and resources, sent to your inbox weekly</p>
+           <input type="text" class="footer__input">
+           <button class="footer__button"></button>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
