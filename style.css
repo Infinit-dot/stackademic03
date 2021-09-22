@@ -2,10 +2,11 @@
 font-family: 'Raleway', sans-serif; */
 
 :root {
-  --clr-primary: rgb(194, 166, 5);
+  --clr-primary: #FCBA05;
   --clr-secondary: rgb(100, 112, 124);
   --clr-tertiary: rgb(213, 216, 219);
-  --clr-text-light: rgb(243, 243, 240);
+  --clr-quaternary: rgb(195, 197, 172);
+  --clr-text-light: rgb(248, 248, 242);
   --clr-text-dark: rgb(33, 31, 58);
 }
 
@@ -90,7 +91,7 @@ header {
   top: 3em;
   margin-left: -50%;
   left: 50%;
-  opacity: 0.7;
+  opacity: 0.4;
 }
 .logo p {
   font-family: "Bebas Neue", cursive;
@@ -127,11 +128,31 @@ header {
   align-items: center;
 }
 .hero__image {
+  position: relative;
   margin-top: 2em;
+  width: 200px;
+  height: 300px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 300px;
+  background-color: var(--clr-quaternary);
+  margin: 1em -2em;
+  transform: rotate(-5deg);
 }
 .hero__image img {
-  max-width: 180px;
+  position: absolute;
+  width: 100%;
   height: auto;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  transform: rotate(8deg);
 }
 .hero__left {
   margin-top: 2em;
@@ -149,6 +170,30 @@ header {
   margin-top: 1em;
   padding-bottom: 2em;
 }
+.services__content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.services__image img {
+  width: 200px;
+  height: auto;
+  margin-top: 3em;
+}
+.services__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  color: var(--clr-text-dark);
+  text-align: center;
+  margin-top: 2em;
+}
+.services__text {
+  color: var(--clr-text-dark);
+  text-align: center;
+  font-size: 0.875rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 .collaboration__content {
   display: flex;
   flex-flow: column;
@@ -161,19 +206,21 @@ header {
   text-align: center;
   margin-top: 2em;
 }
-.collaboration_text {
+.collaboration__text {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.collaboration_text p {
+.collaboration__text p {
   margin-top: 0.5em;
   font-family: "Bebas Neue", cursive;
   font-size: 1.5rem;
   color: black;
   font-weight: bolder;
   opacity: 0.3;
-  padding: 0.2em;
+}
+.collaboration__text p+p {
+margin-left: 1em;
 }
 .collaboration__image {
   margin-top: 2em;
