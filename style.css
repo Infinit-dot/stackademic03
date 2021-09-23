@@ -2,7 +2,7 @@
 font-family: 'Raleway', sans-serif; */
 
 :root {
-  --clr-primary: #FCBA05;
+  --clr-primary: #fcba05;
   --clr-secondary: rgb(100, 112, 124);
   --clr-tertiary: rgb(213, 216, 219);
   --clr-quaternary: rgb(195, 197, 172);
@@ -17,7 +17,7 @@ font-family: 'Raleway', sans-serif; */
   margin: 0;
   box-sizing: border-box;
 }
-
+/* General rules */
 html,
 body {
   font-size: 16px;
@@ -30,7 +30,6 @@ body {
 body {
   color: var(--clr-tertiary);
 }
-
 .container {
   max-width: 1200px;
   width: 80%;
@@ -40,16 +39,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
-/* .grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 1em;
-  grid-template-areas:
-    "hero__image"
-    "hero__left";
-  justify-items: center;
-} */
+.collaboration__image {
+  width: 100%;
+}
 video {
   /* override other styles to make responsive */
   width: 100% !important;
@@ -63,7 +55,6 @@ ul {
   padding: 0;
 }
 li {
-  text-decoration: none;
   list-style: none;
 }
 
@@ -73,7 +64,7 @@ a {
 i {
   color: var(--clr-text-light);
 }
-
+/* -----------Header----------------- */
 header {
   background-color: var(--clr-secondary);
 }
@@ -110,6 +101,10 @@ header {
   font-family: "Raleway", sans-serif;
   color: var(--clr-text-light);
   padding: 0.5em;
+  font-size: 0.875rem;
+}
+.nav__list li {
+  margin-left: 0.3em;
 }
 .btn--nav {
   color: var(--clr-text-light);
@@ -117,15 +112,19 @@ header {
   background-color: var(--clr-primary);
   text-align: center;
   margin-top: 1em;
+  font-size: 0.875rem;
 }
 .btn--nav a {
   color: var(--clr-text-light);
 }
-.hero {
+
+/* -----------Hero section----------------- */
+.hero__content {
   background-color: var(--clr-secondary);
   display: flex;
   flex-flow: column;
   align-items: center;
+  padding-bottom: 3em;
 }
 .hero__image {
   position: relative;
@@ -138,8 +137,8 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 200px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   background-color: var(--clr-quaternary);
   margin: 1em -2em;
   transform: rotate(-5deg);
@@ -155,7 +154,7 @@ header {
   transform: rotate(8deg);
 }
 .hero__left {
-  margin-top: 2em;
+  margin-top: 4em;
 }
 .hero__title h1 {
   color: var(--clr-text-light);
@@ -164,19 +163,21 @@ header {
 .hero__title span {
   color: var(--clr-primary);
 }
-.hero_text {
+.hero__text {
   color: var(--clr-text-light);
   font-size: 0.9rem;
   margin-top: 1em;
   padding-bottom: 2em;
+  max-width: 80%;
 }
+/* -----------Services section----------------- */
 .services__content {
   display: flex;
   flex-flow: column;
   align-items: center;
 }
 .services__image img {
-  width: 200px;
+  max-width: 420px;
   height: auto;
   margin-top: 3em;
 }
@@ -194,6 +195,7 @@ header {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+/* -----------Collaboration section---------------- */
 .collaboration__content {
   display: flex;
   flex-flow: column;
@@ -219,13 +221,13 @@ header {
   font-weight: bolder;
   opacity: 0.3;
 }
-.collaboration__text p+p {
-margin-left: 1em;
+.collaboration__text p + p {
+  margin-left: 1em;
 }
 .collaboration__image {
   margin-top: 2em;
 }
-a.collaboration__btn {
+.collaboration__btn {
   margin-top: 2em;
   font-family: "Raleway", sans-serif;
   background-color: var(--clr-primary);
@@ -234,7 +236,7 @@ a.collaboration__btn {
   text-align: center;
   width: 120px;
 }
-
+/* -----------Testimonials section----------------- */
 .testimonials__label {
   display: flex;
   flex-flow: column;
@@ -256,15 +258,16 @@ a.collaboration__btn {
 .testimonials__name {
   font-family: "Montserrat", sans-serif;
   color: var(--clr-text-dark);
-  font-size: 0.875rem;
+  font-size: 0.813rem;
   margin-bottom: 0.5em;
 }
 .testimonials__message {
   color: var(--clr-text-dark);
   text-align: center;
-  font-size: 0.875rem;
-  margin-bottom: 1em;
+  font-size: 0.813rem;
+  margin-bottom: 1.2em;
 }
+/* -----------Footer section----------------- */
 footer {
   background-color: black;
   text-align: center;
@@ -278,7 +281,8 @@ footer {
   text-transform: uppercase;
 }
 
-.footer__link a, .footer__text {
+.footer__link a,
+.footer__text {
   color: var(--clr-text-light);
   font-size: 0.875rem;
   opacity: 0.7;
@@ -290,21 +294,21 @@ footer {
 
 .footer__input {
   outline: 1px solid var(--clr-text-light);
-  background-color:black;
+  background-color: black;
   border: none;
   margin-top: 2em;
   padding: 0.5em;
   opacity: 0.7;
 }
 .footer__button {
-margin-top: 2em;
-font-family: "Raleway", sans-serif;
-background-color: var(--clr-primary);
-color: var(--clr-text-light);
-padding: 0.5em;
-text-align: center;
-width: 100px;
-border: none;
+  margin-top: 2em;
+  font-family: "Raleway", sans-serif;
+  background-color: var(--clr-primary);
+  color: var(--clr-text-light);
+  padding: 0.5em;
+  text-align: center;
+  width: 100px;
+  border: none;
 }
 
 ::placeholder {
@@ -313,8 +317,9 @@ border: none;
   opacity: 0.5;
 }
 
-.copyright{
+.copyright__text {
   margin-top: 2em;
+  font-size: 0.875rem;
 }
 
 .socials {
@@ -323,6 +328,198 @@ border: none;
   margin-left: 1em;
 }
 
-.socials a + a{
+.socials a + a {
   margin-left: 1em;
+}
+/* -----------Media queries----------------- */
+@media (min-width: 630px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .fas.fa-bars {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn--nav {
+    margin-top: 0;
+  }
+  .hero__image {
+    width: 250px;
+    height: 350px;
+  }
+  .hero__left {
+    margin-top: 6em;
+  }
+  .hero__title {
+    font-size: 1.5rem;
+  }
+  video {
+    /* override other styles to make responsive */
+    width: 80% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+  }
+  .services__title,
+  .collaboration__title,
+  .testimonials__title {
+    font-size: 1.2rem;
+    margin-top: 2.5em;
+  }
+  .collaboration__text p {
+    margin-top: 1em;
+    font-size: 1.7rem;
+  }
+  .services__text,
+  .hero__text {
+    font-size: 0.938rem;
+  }
+  .testimonials__message {
+    max-width: 300px;
+  }
+  .footer__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2em;
+  }
+  .footer__col {
+    margin-top: 0;
+  }
+  .footer__title {
+    margin-top: 0.5em;
+  }
+  .footer__link a {
+    line-height: 2;
+  }
+  .socials {
+    margin-top: 1em;
+    font-size: 1.5rem;
+    margin-left: 1em;
+  }
+}
+
+@media (min-width: 800px) {
+  .btn--nav {
+  margin-left: 4em;
+  }
+  .hero__title {
+    font-size: 1.7rem;
+  }
+  .collaboration__text p {
+    font-size: 2rem;
+  }
+  .collaboration__text p + p {
+    margin-left: 2em;
+  }
+  .services__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2em 2em;
+    grid-template-areas: "first second " "forth third";
+  }
+  .services__title,
+  .collaboration__title,
+  .testimonials__title {
+    font-size: 1.3rem;
+    margin-top: 2.5em;
+  }
+  .services__image--left {
+    grid-area: first;
+  }
+  .col-1 {
+    grid-area: second;
+  }
+  .services__image--right {
+    grid-area: third;
+  }
+  .col-2 {
+    grid-area: forth;
+  }
+  .services__title {
+    text-align: left;
+  }
+  .services__text,
+  .hero__text p {
+    font-size: 1rem;
+    text-align: left;
+  }
+  .services__image img {
+    width: 90%;
+    height: auto;
+  }
+  .testimonials__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 2em 2em;
+    margin-bottom: 2em;
+  }
+  .testimonials__title {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .nav__list li {
+    margin-left: 2em;
+  }
+  .hero__content {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding-bottom: 5em;
+  }
+  .hero__image {
+    width: 300px;
+    height: 400px;
+    margin-left: 4em;
+  }
+  .hero__title {
+    font-size: 2.5rem;
+  }
+  .hero__left {
+    width: 40%;
+  }
+  .services__text,
+  .hero__text {
+    font-size: 1.125rem;
+  }
+  .services__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2em 2em;
+    grid-template-areas: "first second " "forth third";
+  }
+  .services__title,
+  .collaboration__title,
+  .testimonials__title {
+    font-size: 1.6rem;
+    margin-top: 2.5em;
+  }
+  .services__image--left {
+    grid-area: first;
+  }
+  .col-1 {
+    grid-area: second;
+  }
+  .services__image--right {
+    grid-area: third;
+  }
+  .col-2 {
+    grid-area: forth;
+  }
 }
