@@ -29,6 +29,7 @@ body {
 }
 body {
   color: var(--clr-tertiary);
+  background-color: rgb(240, 245, 219);
 }
 .container {
   max-width: 1200px;
@@ -79,14 +80,14 @@ header {
   border-bottom: 1px solid var(--clr-text-light);
   width: 100%;
   position: absolute;
-  top: 3em;
+  top: 4em;
   margin-left: -50%;
   left: 50%;
   opacity: 0.4;
 }
 .logo p {
   font-family: "Bebas Neue", cursive;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.125rem;
   color: var(--clr-primary);
@@ -100,7 +101,7 @@ header {
 .nav__link a {
   font-family: "Raleway", sans-serif;
   color: var(--clr-text-light);
-  padding: 0.5em;
+  padding: 0.3em;
   font-size: 0.875rem;
 }
 .nav__list li {
@@ -108,7 +109,7 @@ header {
 }
 .btn--nav {
   color: var(--clr-text-light);
-  padding: 0.3em;
+  padding: 0.3em 0.8em;
   background-color: var(--clr-primary);
   text-align: center;
   margin-top: 1em;
@@ -237,10 +238,14 @@ header {
   width: 120px;
 }
 /* -----------Testimonials section----------------- */
+
 .testimonials__label {
   display: flex;
   flex-flow: column;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  padding: 1em;
+  margin-bottom: 2em;
 }
 .testimonials__title {
   font-family: "Montserrat", sans-serif;
@@ -332,7 +337,7 @@ footer {
   margin-left: 1em;
 }
 /* -----------Media queries----------------- */
-@media (min-width: 630px) {
+@media screen and (min-width: 630px) {
   .nav {
     display: flex;
     justify-content: space-between;
@@ -408,9 +413,9 @@ footer {
   }
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .btn--nav {
-  margin-left: 4em;
+    margin-left: 4em;
   }
   .hero__title {
     font-size: 1.7rem;
@@ -421,18 +426,25 @@ footer {
   .collaboration__text p + p {
     margin-left: 2em;
   }
+  .testimonials__message {
+    font-size: 0.875rem;
+  }
   .services__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 2em 2em;
+    gap: 3em 2em;
     grid-template-areas: "first second " "forth third";
+    align-items: start;
+    margin-top: 3em;
   }
-  .services__title,
   .collaboration__title,
   .testimonials__title {
     font-size: 1.3rem;
     margin-top: 2.5em;
+  }
+  .services__title {
+    margin-top: 0;
   }
   .services__image--left {
     grid-area: first;
@@ -442,7 +454,8 @@ footer {
   }
   .services__image--right {
     grid-area: third;
-  }
+    justify-self: end;
+}
   .col-2 {
     grid-area: forth;
   }
@@ -455,24 +468,28 @@ footer {
     text-align: left;
   }
   .services__image img {
-    width: 90%;
+    width: 100%;
     height: auto;
+    margin-top: 0;
   }
-  .testimonials__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    gap: 2em 2em;
-    margin-bottom: 2em;
-  }
-  .testimonials__title {
-    grid-column: 1 / span 3;
-    grid-row: 1;
-    margin-bottom: 0;
-  }
+.testimonials__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 3em 2em;
+  margin-bottom: 2em;
 }
-
-@media (min-width: 900px) {
+.testimonials__title {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  margin-bottom: 0;
+}
+}
+@media screen and (min-width: 900px) {
+  .nav__link a {
+    padding: 0.5em;
+    font-size: 1rem;
+  }
   .nav__list li {
     margin-left: 2em;
   }
@@ -488,27 +505,23 @@ footer {
     margin-left: 4em;
   }
   .hero__title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
   .hero__left {
-    width: 40%;
+    width: 50%;
   }
   .services__text,
   .hero__text {
     font-size: 1.125rem;
   }
-  .services__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 2em 2em;
-    grid-template-areas: "first second " "forth third";
-  }
-  .services__title,
   .collaboration__title,
   .testimonials__title {
     font-size: 1.6rem;
     margin-top: 2.5em;
+  }
+  .services__title {
+    font-size: 1.6rem;
+    margin-top: 0;
   }
   .services__image--left {
     grid-area: first;
@@ -521,5 +534,11 @@ footer {
   }
   .col-2 {
     grid-area: forth;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    grid-template-rows: 1fr;
+    gap: 0 3em;
   }
 }
