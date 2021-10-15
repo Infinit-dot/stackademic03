@@ -29,7 +29,7 @@ body {
 }
 body {
   color: var(--clr-tertiary);
-  background-color: rgb(240, 245, 219);
+  background-color: rgb(255,255,240);
 }
 .container {
   max-width: 1200px;
@@ -246,6 +246,7 @@ header {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   padding: 1em;
   margin-bottom: 2em;
+  background-color: white;
 }
 .testimonials__title {
   font-family: "Montserrat", sans-serif;
