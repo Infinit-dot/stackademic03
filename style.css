@@ -29,7 +29,7 @@ body {
 }
 body {
   color: var(--clr-tertiary);
-  background-color: rgb(255,255,240);
+  background-color: rgb(255,255,250);
 }
 .container {
   max-width: 1200px;
